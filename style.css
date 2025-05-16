@@ -50,7 +50,7 @@ body {
     background-color: black;
 }
 
-#nav-bar a:active {
+.nav-bar a:active {
     background-color: white;
 }
 
@@ -248,6 +248,8 @@ li {
     grid-template-columns: repeat(3, 1fr);
 }
 
+
+
 @media (max-width: 1200px) {
     .work {
         display: flex;
@@ -261,6 +263,19 @@ li {
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
+   
+}
+
+.toggle-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+.toggle-btn:hover {
+  background-color: #5f99ff;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 .work img {
@@ -279,6 +294,7 @@ li {
     }
 }
 
+
 .work h3 {
     color: white;
     margin-bottom: 1rem;
@@ -295,22 +311,41 @@ li {
     }
 }
 
-.work p {
+.project-about{
+    color: #999999 ;
+    text-align: left;
     font-family: myfirstfont;
-    color: white;
     font-size: 1rem;
-    width: 350px;
+    width: 450px;
     letter-spacing: 2px;
     padding-left: 1.2rem;
-    text-align: center;
 }
-
-@media (max-width: 1200px) {
-    .work-item p {
-        margin: 0 0 2rem 0;
-        font-size: 1.3rem;
+.project-stack{
+    color: #999999 ;
+    text-align: left;
+    font-family: myfirstfontthin;
+    font-size: 1rem;
+    width: 80%;
+    letter-spacing: 2px;
+    padding-left: 1.2rem;
+    padding-top: 1rem;
+}
+@media (max-width: 600px) {
+    .project-about{
+        font-size: 0.7rem;
+        padding:0 3rem;
+        text-align: center;
+    }
+    .project-stack{
+        font-size: 0.7rem;
+        padding:0;
+        padding-left:3rem;
+        padding-top: 1rem;
+        width: 90%;
+        text-align: center;
     }
 }
+    
 
 .container-3 {
     height: 100%;
@@ -345,12 +380,6 @@ li {
     font-family: myFirstFont;
 }
 
-@media (max-width: 600px) {
-    .w-next {
-        font-size: 0.7rem;
-        text-align: center;
-    }
-}
 
 .text-center {
     display: flex;
@@ -407,3 +436,67 @@ footer {
     font-size: 1rem;
     font-family: myfirstfont;
 }
+
+  .footer-bar-wrapper {
+    background-color: #000;
+    padding: 1rem 0;
+  }
+
+  .footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  .footer-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .footer-bar li {
+    padding: 0 0.5rem;
+    white-space: nowrap;
+    font-family:myfirstfont;
+
+  }
+
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .footer-note {
+    color: white;
+    font-family: myfirstfont;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+
+  @media (max-width: 600px) {
+    .footer-bar {
+      flex-direction: column;
+      align-items: flex-center;
+      gap: 0.5rem;
+    }
+
+    .footer-bar ul {
+      justify-content: center;
+    }
+
+    .footer-note {
+      padding-right: 0;
+      align-self: center;
+    }
+    .footer-link{
+        font-size:0.9rem
+    }
+  }
